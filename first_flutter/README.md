@@ -48,25 +48,21 @@ jubatusへはlpcではなくmfccで特徴データを作ってつっこんでい
 * recommenderの使い方
 
 ```
-
 $ jubarecommender -f recommender.json &
 
 $ ruby update.rb
 
 $ ruby analyze.rb
-
 ```
 
 * classifierの使い方
 
 ```
-
 $ jubaclassifier -f classifier.json &
 
 $ ruby train.rb
 
 $ ruby test.rb
-
 ```
 
 * Todo
