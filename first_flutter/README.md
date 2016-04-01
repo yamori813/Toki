@@ -4,6 +4,12 @@ SPTKのバイナリのパスはビルドバスをスクリプト内に定義し�
 
 一部のスクリプトでデータディレクトリをハードコードしています。
 
+FreeBSD 9.1で試しています。jubatusもFreeBSDで動かしています。
+パッチはprしてあります。
+
+当初Pythonを使おうと思っていたので、Pythonのスクリプトが入っていますが
+SPTKで処理できる事が分かったのでRubyからの処理に変更しました。
+
 * ファイル一覧
 
 analyze.rb  ---  recommender確認スクリプト
@@ -36,28 +42,37 @@ train.rb  ---  classifier教師スクリプト
 
 update.rb  ---  recommender更新スクリプト
 
-jubatusはlpcではなくmfccで特徴データを作っています。
+jubatusへはlpcではなくmfccで特徴データを作ってつっこんでいます。
+
 
 * recommenderの使い方
 
-jubarecommender --configpath recommender.json
+```
 
-ruby update.rb
+$ jubarecommender -f recommender.json &
 
-ruby analyze.rb
+$ ruby update.rb
+
+$ ruby analyze.rb
+
+```
 
 * classifierの使い方
 
-jubaclassifier -f classifier.json
+```
 
-ruby train.rb
+$ jubaclassifier -f classifier.json &
 
-ruby test.rb
+$ ruby train.rb
+
+$ ruby test.rb
+
+```
 
 * Todo
 
 ゼロクロスだけだと対象選別の精度が悪いので改善策を考える
 
-一点のmfccだけの特徴量だとご認識が多いので改善策を考える
+一点のmfccだけの特徴量だと誤認識が多いので改善策を考える
 
 SPTKをjubatusのpluginにする（意味あるかな？）
