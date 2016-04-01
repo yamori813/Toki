@@ -2,7 +2,7 @@
 
 host = "127.0.0.1"
 port = 9199
-name = "gain_test"
+name = "mfcc_test"
 
 require 'jubatus/classifier/client'
 
