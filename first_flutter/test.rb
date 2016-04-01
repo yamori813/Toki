@@ -9,6 +9,8 @@ require 'jubatus/classifier/client'
 client = Jubatus::Classifier::Client::Classifier.new(host, port, name)
 
 testsnd = [
+"snd/T30.aiff",
+"snd/T40.aiff",
 "snd/T8.aiff",
 "snd/T68.aiff"
 ]
