@@ -1,4 +1,4 @@
-「トキの飛翔」の最初の羽ばたき
+# 「トキの飛翔」の最初の羽ばたき
 
 SPTKのバイナリのパスはビルドバスをスクリプト内に定義しています。
 
@@ -10,7 +10,7 @@ FreeBSD 9.1で試しています。jubatusもFreeBSDで動かしています。
 当初Pythonを使おうと思っていたので、Pythonのスクリプトが入っていますが
 SPTKで処理できる事が分かったのでRubyからの処理に変更しました。
 
-* ファイル一覧
+## ファイル一覧
 
 analyze.rb  ---  recommender確認スクリプト
 
@@ -45,7 +45,7 @@ update.rb  ---  recommender更新スクリプト
 jubatusへはlpcではなくmfccで特徴データを作ってつっこんでいます。
 
 
-* recommenderの使い方
+## recommenderの使い方
 
 ```
 $ jubarecommender -f recommender.json &
@@ -55,7 +55,7 @@ $ ruby update.rb
 $ ruby analyze.rb
 ```
 
-* classifierの使い方
+## classifierの使い方
 
 ```
 $ jubaclassifier -f classifier.json &
@@ -65,7 +65,7 @@ $ ruby train.rb
 $ ruby test.rb
 ```
 
-* Todo
+## Todo
 
 ゼロクロスだけだと対象選別の精度が悪いので改善策を考える
 
