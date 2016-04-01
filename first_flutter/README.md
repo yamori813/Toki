@@ -10,6 +10,9 @@ FreeBSD 9.1で試しています。jubatusもFreeBSDで動かしています。
 当初Pythonを使おうと思っていたので、Pythonのスクリプトが入っていますが
 SPTKで処理できる事が分かったのでRubyからの処理に変更しました。
 
+サンプルデータはここにあります。
+http://yahoo.jp/box/GfhkDB
+
 ## ファイル一覧
 
 analyze.rb  ---  recommender確認スクリプト
