@@ -24,7 +24,7 @@ fftdmp.sh  ---  SPTKを使ってfftデータをダンプ(SPTK)
 
 findtw.sh  ---  最大ゼロクロス部分を0.4秒抜き出し
 
-list.csv  ---  学習データ
+list.csv  ---  学習データリスト
 
 lpc.py  ---  lpc確認pythonスクリプト
 
