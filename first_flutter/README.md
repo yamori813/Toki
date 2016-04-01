@@ -7,19 +7,33 @@ SPTKのバイナリのパスはビルドバスをスクリプト内に定義し�
 * ファイル一覧
 
 analyze.rb  ---  recommender確認スクリプト
+
 center.sh  ---  センターのフレーム切り出しスクリプト(SPTK)
+
 chkzero.sh  ---  最大ゼロクロス確認スクリプト(SPTK)
+
 classifier.json  ---  jubatus classifier設定ファイル
+
 fftdmp.sh  ---  SPTKを使ってfftデータをダンプ(SPTK)
+
 findtw.sh  ---  最大ゼロクロス部分を0.4秒抜き出し
+
 list.csv  ---  学習データ
+
 lpc.py  ---  lpc確認pythonスクリプト
+
 lpc.sh  ---  lpc取得スクリプト(SPTK)
+
 lpcdmp.sh  ---  lpcダンプスクリプト(SPTK)
+
 mfcc.sh  ---  mfcc取得スクリプト(SPTK)
+
 recommender.json  ---  jubatus recommender設定ファイル
+
 test.rb  ---  classifierテストスクリプト
+
 train.rb  ---  classifier教師スクリプト
+
 update.rb  ---  recommender更新スクリプト
 
 jubatusはlpcではなくmfccで特徴データを作っています。
