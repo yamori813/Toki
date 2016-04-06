@@ -13,12 +13,7 @@ COUNT=0
 
 for f in ${FILES}; do
 
-  sox ${f} temp.raw
-
-  NUM=`${SPTKBIN}/x2x/x2x +sf temp.raw | ${SPTKBIN}/zcross/zcross -l ${SAMPLE} | ${SPTKBIN}/dmp/dmp +f | sort -r -n +1 | head -1 | awk '{print $1}'`
-
-  TIME=`echo "scale=2; ${NUM} * ${SAMPLE} / 44100" | bc`
-
+  TIME=`./chkzero.sh ${f} | awk '{print $1}'`
 
   LEN=0.4
   START=`echo "scale=2; ${TIME} - ${LEN} / 2" | bc`
