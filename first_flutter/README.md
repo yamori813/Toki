@@ -11,7 +11,7 @@ FreeBSD 9.1で試しています。jubatusもFreeBSDで動かしています。
 SPTKで処理できる事が分かったのでRubyからの処理に変更しました。
 
 サンプルデータはここにあります。
-http://yahoo.jp/box/GfhkDB
+http://yahoo.jp/box/6yLp6j
 
 ## ファイル一覧
 
