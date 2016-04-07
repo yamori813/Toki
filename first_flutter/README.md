@@ -45,6 +45,12 @@ train.rb  ---  classifier教師スクリプト
 
 update.rb  ---  recommender更新スクリプト
 
+dmpzero.sh --- ゼロクロスダンプスクリプト
+
+mkteach.rb --- データ抜き出しrubyスクリプト
+
+api.rb --- RoRのAPIスクリプト
+
 jubatusへはlpcではなくmfccで特徴データを作ってつっこんでいます。
 
 
@@ -66,6 +72,13 @@ $ jubaclassifier -f classifier.json &
 $ ruby train.rb
 
 $ ruby test.rb
+```
+
+## WebAPI
+
+```
+$ curl http://localhost:3000/api/v1/upload -F sndfile=@T30.aiff
+{"result":"tugumi"}
 ```
 
 ## Todo
