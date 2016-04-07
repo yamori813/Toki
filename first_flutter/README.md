@@ -72,6 +72,10 @@ $ jubaclassifier -f classifier.json &
 $ ruby train.rb
 
 $ ruby test.rb
+snd/T30.aiff tugumi
+snd/T40.aiff hiyodori
+snd/T8.aiff kamo
+snd/T68.aiff karasu
 ```
 
 ## WebAPI
