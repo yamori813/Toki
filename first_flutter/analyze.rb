@@ -8,7 +8,7 @@ NAME = "mfcc_test";
 require 'json'
 require 'jubatus/recommender/client'
 
-  path = "snd"
+  path = ARGV[0]
 
   recommender = Jubatus::Recommender::Client::Recommender.new(HOST, PORT, NAME)
   Dir::glob( path + "/*" ).each {|fname|

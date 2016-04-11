@@ -60,9 +60,9 @@ api.rb --- RoRのAPIスクリプト
 ```
 $ jubarecommender -f recommender.json &
 
-$ ruby update.rb
+$ ruby update.rb set2
 
-$ ruby analyze.rb
+$ ruby analyze.rb set2
 ```
 
 ## classifierの使い方
