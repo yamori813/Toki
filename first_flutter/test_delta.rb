@@ -9,12 +9,18 @@ require 'jubatus/classifier/client'
 
 client = Jubatus::Classifier::Client::Classifier.new(host, port, name)
 
+testsnd = []
+
+if ARGV[0] != nil 
+testsnd = [ARGV[0]]
+else
 testsnd = [
 "snd/T40.aiff",
 "snd/T8.aiff",
 "snd/T30.aiff",
 "snd/T68.aiff"
 ]
+end
 
 testsnd.each{|file|
     IO.popen("./delta.sh " << FRAMES.to_s << " " << file, "r+") {|io|
