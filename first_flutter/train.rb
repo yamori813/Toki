@@ -26,5 +26,8 @@ open("list.csv") do |file|
     end
 end
 
+# training data must be shuffled on online learning!
+train_data.sort_by{rand}
+
 client.train(train_data)
 

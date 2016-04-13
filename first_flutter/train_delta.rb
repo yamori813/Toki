@@ -11,7 +11,15 @@ client = Jubatus::Classifier::Client::Classifier.new(host, port, name)
 
 train_data = []
 
-open("list.csv") do |file|
+listfile = ""
+
+if ARGV[0] != nil
+  listfile = ARGV[0]
+else
+  listfile = "list.csv"
+end
+
+open(listfile) do |file|
     while l = file.gets
         array = l.chomp.split(",")
         IO.popen("./delta.sh " << FRAMES.to_s << " " << array[0], "r+") {|io|
@@ -52,5 +60,7 @@ open("list.csv") do |file|
     end
 end
 
-client.train(train_data)
+# training data must be shuffled on online learning!
+train_data.sort_by{rand}
 
+client.train(train_data)
