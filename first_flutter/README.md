@@ -79,6 +79,15 @@ snd/T8.aiff kamo
 snd/T68.aiff karasu
 ```
 
+## Clusteringの使い方
+
+
+```
+$ jubaclustering -f kmeans.json
+
+$ ruby clust.rb snd
+```
+
 ## WebAPI
 
 ```
