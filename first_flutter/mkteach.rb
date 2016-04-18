@@ -16,8 +16,8 @@ Dir::glob( inpath + "/*" ).each {|fname|
       while(num < arr.length - 5) 
           if arr[num] > 10 && arr[num - 1] * 1.2 < arr[num] && arr[num] > arr[num + 1] * 1.2 then
           pos = (num * 0.05 - 0.2).round(2)
-          system("sox " << fname << " " << outpath << "/T" << "%04d" % [count] << ".aiff trim " << pos.to_s << " 0.4")
-          puts fname + ",T%04d" % [count] + ".aiff"
+          system("sox " << fname << " " << outpath << "/S" << "%04d" % [count] << ".aiff trim " << pos.to_s << " 0.4")
+          puts fname + ",S%04d.aiff" % [count] + ",%.2f" % pos
           count = count + 1
           num = num + 10
         else
