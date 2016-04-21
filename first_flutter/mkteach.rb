@@ -26,9 +26,6 @@ Dir::glob( inpath + "/*" ).each {|fname|
         else
           num = num + 1
         end
-        if count > 100
-          break
-        end
       end
     }
   end
