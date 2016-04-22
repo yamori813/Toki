@@ -11,7 +11,7 @@ FreeBSD 9.3で試しています。[jubatus](http://jubat.us/ja/)もFreeBSDで
 当初Pythonを使おうと思っていたので、Pythonのスクリプトが入っていますが
 SPTKで処理できる事が分かったのでRubyからの処理に変更しました。
 
-jubatusへはlpcではなくmfccで特徴データを作ってつっこんでいます。
+jubatusへはlpcではなく8フレームのmfccで特徴データを作ってつっこんでいます。
 
 サンプルデータはここにあります。
 http://yahoo.jp/box/6yLp6j
@@ -81,6 +81,7 @@ snd/T68.aiff karasu
 
 ## Clusteringの使い方
 
+データによっては動かないみたいです。なんでだろう。。。
 
 ```
 $ jubaclustering -f kmeans.json
@@ -97,8 +98,10 @@ $ curl http://localhost:3000/api/v1/upload -F sndfile=@T30.aiff
 
 ## Todo
 
-ゼロクロスだけだと対象選別の精度が悪いので改善策を考える
+~~ゼロクロスだけだと対象選別の精度が悪いので改善策を考える~~ 
+pitchに変更
 
-一点のmfccだけの特徴量だと誤認識が多いので改善策を考える
+~~一点のmfccだけの特徴量だと誤認識が多いので改善策を考える~~
+8フレームのmfccに変更。正規化とΔは試したがうまくいかなかったので未使用。
 
 SPTKをjubatusのpluginにする（意味あるかな？）
