@@ -14,7 +14,7 @@
     ]
   },
   "parameter" : {
-    "k" : 20,
+    "k" : 5,
     "compressor_method" : "compressive_kmeans",
     "bucket_size" : 1000,
     "compressed_bucket_size" : 100,
