@@ -23,7 +23,6 @@ open(listfile) do |file|
     while l = file.gets
         array = l.chomp.split(",")
         if array[1] != nil
-p array[1]
         IO.popen("./delta.sh " << FRAMES.to_s << " " << array[0], "r+") {|io|
             io.close_write
             lpc = io.read(16*4*FRAMES*3)
